@@ -36,6 +36,14 @@ if len(sys.argv)>1:
 
 
   height = 100000 ##in cm
+
+  m = #function mean in cm
+  s = #function standard deviation in cm
+  a = #skewness
+
+  #height =  #skew normal? , in cm
+  # ^^^^equation, should randomize based  on a fit to the hights generated for corsika output to compare regular showers with STACKIN showers
+
   output.write("FIXHEI "+str(height)+"  0\n")
 
 

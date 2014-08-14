@@ -6,6 +6,8 @@
 import sys
 import random
 import os,os.path
+import scipy as sci
+import numpy as np
 
 
 
@@ -37,7 +39,19 @@ if len(sys.argv)>1:
 
   height = 100000 ##in cm
 
-  #height =  #equation, should randomize slightly
+  m = #function mean in cm
+  s = #function standard deviation in cm
+  a = #skewness
+  scale = #scale factor
+  #cdf = 1 + sci.special.erf((a*(x-m))/(np.sqrt(2)*s))
+  #skewnorm = scale/s * np.exp((-1*(x-m)^2)/*(2*s)) * cdf
+  ### thsese two equatiosn are great, BUT we want x not y sooo... need to solve?
+
+
+  
+
+  #height =  #skew normal? , in cm
+  # ^^^^equation, should randomize based  on a fit to the hights generated for corsika output to compare regular showers with STACKIN showers
 
   output.write("FIXHEI "+str(height)+"  0\n")
 
