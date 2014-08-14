@@ -1,0 +1,35 @@
+DIRECT  __PATH__                  output directory
+RUNNR   1                         number of run
+EVTNR   1                         number of first shower event
+SEED    __SEED1__   0   0         seed for hadronic part
+SEED    __SEED2__   0   0         seed for EGS4 part
+SEED    __SEED3__   0   0         seed for Cherenkov part
+NSHOW   1                         number of showers to generate
+PRMPAR  14                        primary particle code
+ERANGE  __ENERGY__ __ENERGY__     energy range of primary particle (GeV)
+ESLOPE  -0                        slope of primary energy spectrum
+THETAP  15. 15.                     range of zenith angle (degree)
+PHIP    0. 0.                     range of azimuth angle (degree)
+QGSJET  T  0                      use QGS for high energy hadrons
+QGSSIG  T                         use QGS hadronic cross sections
+HADFLG  0  0  0  0  0  2          flags for hadr.interact.&fragmentation
+ELMFLG  T  T                      em. interaction flags (NKG, EGS)
+STEPFC  1.0                       mult. scattering step length factor
+RADNKG  1000.E2                   outer radius for NKG lat.dens.determ.
+LONGI   T  5.  T   T             longit.distr., step size, fit & out
+MUMULT  T                         muon multiple scattering by Moliere
+MUADDI  F                         additional muon information
+OBSLEV  200.0E2                   observation level (cm)
+ARRANG  0.0                       rotation mag.north to array grid (deg)
+MAXPRT  1                         max. number of printed events
+ECTMAP  1.E0                      cut on gamma factor for printout
+THIN    __EFRCTHN__ __WMAX__ __RMAX__ thinning efrcthn, wmax, rmax (cm)
+CERARY  41 41 10000 10000 100 100   def. of Cherenkov array grid (cm)
+CWAVLG  200.  700.                Cherenkov wavelength band (nm)
+CERSIZ  100.                      bunch size Cherenkov photons
+CERFIL  T                         Cherenkov output to extra file
+CSCAT   1  0. 0.                  scatter Cherenkov events (cm)
+ATMOD   1                         atmospheric model selection
+HILOW   100.                      transition energy between models (GeV)
+DEBUG   F  6  F  999999999        debug flag, log. unit, delayed debug
+EXIT

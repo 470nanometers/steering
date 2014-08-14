@@ -1,0 +1,95 @@
+#!/usr/bin/python
+
+##
+##
+###############################################################################################################
+import sys
+import random
+import os,os.path
+
+
+
+
+
+###### get stackin input, write steering, randomize height according to fit ######
+if len(sys.argv)>1:
+  filename = str(sys.argv[1])
+  mod = filename.strip('.part')
+  mod = mod.strip('/corsikaqgp/stacks/testing2/')
+  #output = open('/corsikaqgp/steering/'+mod+'.steering','w+')
+  output = open(mod+'.steering','w+')
+  output.write("RUNNR   3                        run number\n")
+  output.write("EVTNR   1                              number of first shower event\n")
+  output.write("NSHOW   1                              number of showers to generate\n")
+  #output.write("THIN    1e-15 1 0                thinning definition\n")
+  output.write("THIN    1e-8 10 0                thinning definition\n") #using 1e-8 for EeV showers and 1e-7 for 100PeV for a roughly 10 GeV cut off(wmax ==10), could go 1e-6 and 1e-7 for a 100 GeV cutoff (wmax == 100); lets make wmax 10 because optimized Wmax = ethin * E0 (i.e. 1e-8 * 1e9 for a 1EeV shower == 10)
+
+  angle = 0
+  output.write("THETAP  "+str(angle)+" "+str(angle)+"                       range of zenith angle (degree)\n")
+  output.write("PHIP    0.  0.                       range of azimuth angle (degree)\n")
+  ##### inputs
+
+  ### filename
+  output.write("INFILE "+filename+"\n")
+  #### height, weighted by fitting
+
+
+
+  height = 100000 ##in cm
+
+  #height =  #equation, should randomize slightly
+
+  output.write("FIXHEI "+str(height)+"  0\n")
+
+
+  #output.write("FIXCHI  0. starting altitude (g/cm**2)\n")
+  ### random seeds
+  rand1 = random.randint(1,900000000) # 1 <= N <= 900 000 000
+  rand2 = random.randint(1,900000000)
+  output.write("SEED    "+str(rand1)+"   0   0                      seed for 1. random number sequence\n")
+  output.write("SEED    "+str(rand2)+"   0   0                      seed for 2. random number sequence\n")
+  ######
+  output.write("OBSLEV  0                         observation level (in cm)\n")
+  output.write("MAGNET  20.0   42.8                  magnetic field centr. Europe\n")
+  output.write("HADFLG  0  0  0  0  0  2               flags hadr.interact.&fragmentation\n")
+  output.write("ECUTS   1.  1.  0.001  0.001          energy cuts for particles\n")
+  output.write("MUADDI  T                              additional info for muons\n")
+  output.write("MUMULT  T                              muon multiple scattering angle\n")
+  output.write("ELMFLG  T   T                          em. interaction flags (NKG,EGS)\n")
+  output.write("STEPFC  1.0                            mult. scattering step length fact.\n")
+  output.write("RADNKG  200.E2                         outer radius for NKG lat.dens.distr.\n")
+  output.write("ARRANG  0.                             rotation of array to north\n")
+  output.write("LONGI   T   5.  T  T                   longit.distr. & step size & fit & out\n")
+  output.write("ECTMAP  1.E2                          cut on gamma factor for printout\n")
+  output.write("MAXPRT  1                              max. number of printed events\n")
+
+
+  output.write("DIRECT  ./particles/output/"+str(angle)+"deg_"+str(height/10000)+"km_"+mod+"_               output directory\n")
+
+
+  output.write("PAROUT  T F                            suppress DAT file\n")
+  output.write("EXIT\n")
+
+
+
+
+                           
+
+
+
+  output.close()
+
+
+
+
+
+#### if the file is not input ####
+else:
+  print "Usage: python stackin_steering_generator.py [PATH/FILE]"
+  print "File must be STACKIN formatted input"
+
+  
+
+
+
+

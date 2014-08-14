@@ -1,0 +1,37 @@
+RUNNR   3                              run number
+EVTNR   1                              number of first shower event
+NSHOW   1                              number of showers to generate
+* PRMPAR  14                             particle type of prim. particle
+* ESLOPE  -2.7                           slope of primary energy spectrum
+* ERANGE  1.E5  1.E5                     energy range of primary particle
+THIN    1e-15 1 0                thinning definition
+THETAP  0.  0.                       range of zenith angle (degree)
+PHIP    0.  0.                       range of azimuth angle (degree)
+INFILE /corsikaqgp/stacks/testing2/rmc_eposlhc_303606131_p_C_1e+08_682.part 
+*INFILE /corsikaqgp/blah
+*FIXHEI  18765.43e2      0
+*FIXHEI 112.8E5  0   max height(cm)
+FIXHEI 33E5  0
+FIXCHI  0.                            starting altitude (g/cm**2)
+SEED    1   0   0                      seed for 1. random number sequence
+SEED    2   0   0                      seed for 2. random number sequence
+OBSLEV  0                         observation level (in cm)
+MAGNET  20.0   42.8                  magnetic field centr. Europe
+HADFLG  0  0  0  0  0  2               flags hadr.interact.&fragmentation
+*ECUTS   0.3  0.3  0.003  0.003         energy cuts for particles
+ECUTS   1.  1.  0.001  0.001          energy cuts for particles
+MUADDI  T                              additional info for muons
+MUMULT  T                              muon multiple scattering angle
+ELMFLG  T   T                          em. interaction flags (NKG,EGS)
+STEPFC  1.0                            mult. scattering step length fact.
+RADNKG  200.E2                         outer radius for NKG lat.dens.distr.
+ARRANG  0.                             rotation of array to north
+LONGI   T   5.  T  T                   longit.distr. & step size & fit & out
+*ECTMAP  1.2345E9                       cut on gamma factor for printout
+ECTMAP  1.E2                          cut on gamma factor for printout
+MAXPRT  1                              max. number of printed events
+DIRECT  ./particles/output/0deg_33km_crmc_eposlhc_303606131_p_C_1e+08_682_               output directory
+PAROUT  T F                            suppress DAT file
+*USER    you
+EXIT
+
