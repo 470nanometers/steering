@@ -117,7 +117,7 @@ if len(sys.argv)>1:
 
 #### if the file is not input ####
 else:
-  print "Usage: python steering_generatorEPOS.py energy thin wmax rmax"
+  print "Usage: python steering_generatorEPOS_NOQGP.py energy thin wmax rmax"
   print "Energy in GeV"
 
   
