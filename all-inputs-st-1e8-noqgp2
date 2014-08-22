@@ -4,8 +4,8 @@ NSHOW   1                              number of showers to generate
 THIN    1e-15 1 0                thinning definition
 THETAP  0.  0.                       range of zenith angle (degree)
 PHIP    0.  0.                       range of azimuth angle (degree)
-INFILE /corsikaqgp/stacks/testing2/rmc_eposlhc_992570442_p_C_1e+08_NOQGP_786.part 
-FIXHEI 36E5  0
+INFILE /corsikaqgp/stacks/testing2/rmc_eposlhc_992570442_p_C_1e+08_NOQGP_422.part 
+FIXHEI 12E5  0
 FIXCHI  0.                            starting altitude (g/cm**2)
 SEED    1   0   0                      seed for 1. random number sequence
 SEED    2   0   0                      seed for 2. random number sequence
@@ -24,7 +24,7 @@ LONGI   T   5.  T  T                   longit.distr. & step size & fit & out
 *ECTMAP  1.2345E9                       cut on gamma factor for printout
 ECTMAP  1.E2                          cut on gamma factor for printout
 MAXPRT  1                              max. number of printed events
-DIRECT  ./particles/output/0deg_36km_crmc_eposlhc_992570442_p_C_1e+08_NOQGP_786_               output directory
+DIRECT  ./particles/output/0deg_12km_crmc_eposlhc_992570442_p_C_1e+08_NOQGP_422_               output directory
 PAROUT  T F                            suppress DAT file
 *USER    you
 EXIT

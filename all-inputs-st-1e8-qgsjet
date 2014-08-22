@@ -1,11 +1,11 @@
 RUNNR   3                              run number
 EVTNR   1                              number of first shower event
 NSHOW   1                              number of showers to generate
-THIN    1e-15 1 0                thinning definition
+THIN    1e-6 1 0                thinning definition
 THETAP  0.  0.                       range of zenith angle (degree)
 PHIP    0.  0.                       range of azimuth angle (degree)
 INFILE /corsikaqgp/stacks/testing2/rmc_qgsjetII04_55924342_p_C_1e+08_88.part
-FIXHEI 12E5  0
+FIXHEI 36E5  0
 FIXCHI  0.                            starting altitude (g/cm**2)
 SEED    1   0   0                      seed for 1. random number sequence
 SEED    2   0   0                      seed for 2. random number sequence
@@ -24,7 +24,7 @@ LONGI   T   5.  T  T                   longit.distr. & step size & fit & out
 *ECTMAP  1.2345E9                       cut on gamma factor for printout
 ECTMAP  1.E2                          cut on gamma factor for printout
 MAXPRT  1                              max. number of printed events 
-DIRECT  ./particles/output/0deg_12km_crmc_qgsjetII04_55924342_p_C_1e+08_88_               output directory
+DIRECT  ./particles/output/TESTING_               output directory
 PAROUT  T F                            suppress DAT file
 *USER    you
 EXIT
